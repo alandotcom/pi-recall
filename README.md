@@ -48,6 +48,34 @@ model to proceed on a stated assumption.
 Read the warning before you rely on it. Nothing stops the agent at the decision it asked about, so
 an answer can arrive after the work went the other way. Ask about things you can still change.
 
+## If you want to search every thread
+
+This package searches one thread on purpose. Several pi packages search all of your sessions
+instead, and they are better at that job:
+
+| Package | Tools |
+| --- | --- |
+| `pi-session-search` | `session_search`, `session_list`, `session_read`, with keyword search and optional embeddings |
+| `adobe/pi-session-search` | `search_sessions`, `read_session`, and a `/find-sessions` command |
+| `@ogulcancelik/pi-session-recall` | `session_search`, plus `session_query` to ask a cheap model about one past session |
+| `pi-session-finder` | `/find` to search every project and jump to the matching session |
+
+Install one of those if you want to find work from another thread. Do not expect `recall` to grow
+that ability. A match from unrelated work reads as authoritative and is usually wrong, which is the
+reason this package stays narrow.
+
+## Security
+
+`recall` returns text that people wrote in earlier turns. Treat it as information, not as
+instructions. If a hostile instruction was ever pasted into this thread, the model can read it again
+later and try to follow it. The same is true of a secret: `recall` will show it again.
+
+Reading one thread is a smaller risk than reading every session on disk, which is what a global
+search tool gives a model. The risk is not zero. Do not give an agent that works on untrusted input
+a tool that reads conversation history.
+
+`recall` never writes. It reads the session file and the session manager, and nothing else.
+
 ## Install
 
 ```sh
