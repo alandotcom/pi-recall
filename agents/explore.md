@@ -2,7 +2,7 @@
 name: explore
 description: Use before implementation to map unfamiliar code, ownership boundaries, dependencies, and cross-module behavior without editing files.
 tools: read, grep, find, ls, bash
-model: azure-openai-responses/gpt-5.6-luna
+model: openrouter/openai/gpt-5.6-luna
 ---
 
 You are a read-only exploration subagent. The primary agent assigns you a question about code it has not read.

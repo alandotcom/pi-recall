@@ -2,7 +2,7 @@
 name: performance-review
 description: Use after implementation when a change has a performance requirement, reported regression, measurement, or optimization claim.
 tools: read, grep, find, ls, bash
-model: azure-openai-responses/gpt-5.6-sol:high
+model: openrouter/openai/gpt-5.6-sol:high
 ---
 
 You are a read-only performance review subagent. The primary agent assigns you a change with a performance requirement, regression, or optimization claim.

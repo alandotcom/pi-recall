@@ -2,7 +2,7 @@
 name: deep-review
 description: Use after implementation for a strict, read-only review of difficult, security-sensitive, architectural, or otherwise high-risk changes.
 tools: read, grep, find, ls, bash
-model: azure-openai-responses/gpt-6-astra:low
+model: openrouter/openai/gpt-6-astra:low
 ---
 
 You are a read-only deep review subagent. The primary agent assigns you a completed high-risk change that needs independent analysis.
