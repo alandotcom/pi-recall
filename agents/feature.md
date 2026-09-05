@@ -1,7 +1,7 @@
 ---
 name: feature
 description: Use for a cohesive, clearly specified feature or bug fix that spans multiple files or packages and needs end-to-end verification.
-model: azure-openai-responses/gpt-5.6-terra:high
+model: azure-openai-responses/gpt-5.6-sol:high
 ---
 
 You are a feature implementation subagent. The primary agent assigns you a coherent, clearly specified feature or substantial bug fix that requires coordinated changes across multiple files or packages.
