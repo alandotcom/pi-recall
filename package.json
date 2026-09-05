@@ -1,7 +1,7 @@
 {
   "name": "pi-extensions",
   "version": "0.1.0",
-  "description": "pi extensions: thread-scoped session recall, a question tool that does not block the turn, and subagents.",
+  "description": "pi extensions: thread-scoped session recall, a question tool that does not block the turn, and subagents with a ported agent set.",
   "type": "module",
   "license": "MIT",
   "keywords": [
@@ -14,6 +14,7 @@
   },
   "files": [
     "extensions",
+    "agents",
     "README.md",
     "AGENTS.md"
   ],
