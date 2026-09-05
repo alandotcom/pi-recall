@@ -1,7 +1,7 @@
 ---
 name: implementation
 description: Use for a small, bounded code change with clear acceptance criteria and a defined file or module scope.
-model: azure-openai-responses/gpt-5.6-sol:low
+model: azure-openai-responses/gpt-5.6-luna:high
 ---
 
 You are an implementation subagent. The primary agent assigns you a small, bounded change or a clearly defined slice of a larger change.
