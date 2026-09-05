@@ -18,6 +18,10 @@ Keep the result bounded. `recall` caps its whole response at 6,000 characters. A
 is cheap on the turn that produces it and expensive on every turn after, because it stays in the
 prompt.
 
+The primary agent calls `recall` directly. Subagents start in fresh `--no-session` processes and
+cannot search the caller's history. The primary agent can delegate summarization by supplying the
+selected recall excerpts in the subagent task.
+
 ## Constraints
 
 - Read session files only. Never write to `~/.pi/agent/sessions`.

@@ -128,16 +128,25 @@ moves it forward on its own:
 pi install git:github.com/alandotcom/pi-extensions@v0.1.0
 ```
 
-## Make the agent use recall
+## Make the primary agent use recall
 
-An agent does not search its own history unless you tell it to. Add this to your `AGENTS.md`:
+The primary agent must call the `recall` tool directly because the tool reads the current pi session.
+A subagent starts in a fresh `--no-session` process, so it cannot search the caller's history. If a
+large recall result needs summarization, the primary agent can delegate the summary by including the
+selected excerpts in the subagent task.
+
+Add this to your `AGENTS.md`:
 
 ```md
 ## Search this thread first
 
-Call `recall` before you re-read files, and before you decide anything that this thread already
-decided. Always do this on your first turn after a compaction. Explore the code directly only if
-`recall` returns nothing.
+Call the `recall` tool directly when earlier messages may already answer the question, before
+repeating investigation, and on the first turn after compaction. Use the results to recover
+decisions; read current files when verification or new work requires it. An empty search result
+means no match was found in this thread.
+
+Fresh subagents cannot search the caller's history. If retrieved history needs summarization,
+supply selected recall excerpts explicitly in the subagent task.
 ```
 
 ## License
