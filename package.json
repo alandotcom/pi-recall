@@ -4,12 +4,12 @@
   "description": "Recall earlier messages in the current pi thread, and ask the user questions without blocking the turn.",
   "type": "module",
   "license": "MIT",
-  "keywords": ["pi-package"],
+  "keywords": [
+    "pi-package"
+  ],
   "pi": {
-    "extensions": ["./extensions"]
-  },
-  "devDependencies": {
-    "@earendil-works/pi-coding-agent": "^0.84.4",
-    "typebox": "^0.34.0"
+    "extensions": [
+      "./extensions"
+    ]
   }
 }
