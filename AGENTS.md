@@ -1,6 +1,6 @@
 # Working in this repository
 
-`pi-recall` is a pi package with two extensions: `recall` searches this thread's own history, and
+`pi-extensions` is a pi package with two extensions: `recall` searches this thread's own history, and
 `ask_async` asks the user a question without stopping the turn.
 
 ## Rules that the design depends on

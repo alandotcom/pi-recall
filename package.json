@@ -1,7 +1,7 @@
 {
-  "name": "pi-recall",
+  "name": "pi-extensions",
   "version": "0.1.0",
-  "description": "Recall earlier messages in the current pi thread, and ask the user questions without blocking the turn.",
+  "description": "pi extensions: thread-scoped session recall, a question tool that does not block the turn, and subagents.",
   "type": "module",
   "license": "MIT",
   "keywords": [

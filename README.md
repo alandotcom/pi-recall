@@ -1,4 +1,4 @@
-# pi-recall
+# pi-extensions
 
 A pi package with two extensions.
 
@@ -79,7 +79,7 @@ a tool that reads conversation history.
 ## Install
 
 ```sh
-pi install git:github.com/alandotcom/pi-recall
+pi install git:github.com/alandotcom/pi-extensions
 ```
 
 To try it for one run without installing:
