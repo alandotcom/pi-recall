@@ -11,5 +11,16 @@
     "extensions": [
       "./extensions"
     ]
-  }
+  },
+  "files": [
+    "extensions",
+    "README.md",
+    "AGENTS.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alandotcom/pi-extensions.git"
+  },
+  "homepage": "https://github.com/alandotcom/pi-extensions#readme",
+  "bugs": "https://github.com/alandotcom/pi-extensions/issues"
 }

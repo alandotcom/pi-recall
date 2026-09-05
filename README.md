@@ -1,6 +1,6 @@
 # pi-extensions
 
-A pi package with two extensions.
+A pi package with two extensions. Install both, or pick one.
 
 `recall` searches earlier messages in the current thread, including messages that pi dropped from
 context when the session compacted.
@@ -86,6 +86,46 @@ To try it for one run without installing:
 
 ```sh
 pi -e ./extensions/recall.ts -e ./extensions/ask-async.ts
+```
+
+## Installing only one of them
+
+pi loads every extension in a package by default. To take one, use the object form of the entry in
+`~/.pi/agent/settings.json` and name the file you want:
+
+```jsonc
+{
+  "packages": [
+    {
+      "source": "git:github.com/alandotcom/pi-extensions",
+      "extensions": ["extensions/recall.ts"]
+    }
+  ]
+}
+```
+
+Omit the `extensions` key to load all of them. Use `[]` to load none. A `!pattern` entry excludes a
+match, and `-path` excludes one exact path, so the same result can be written as an exclusion:
+
+```jsonc
+{ "source": "git:github.com/alandotcom/pi-extensions", "extensions": ["extensions/*.ts", "!extensions/ask-async.ts"] }
+```
+
+`pi config` edits the same setting from a picker.
+
+## Versions
+
+A git entry without a ref follows the default branch:
+
+```sh
+pi install git:github.com/alandotcom/pi-extensions
+```
+
+Add a tag or a commit to pin it. `pi update` then reconciles the checkout to that ref and never
+moves it forward on its own:
+
+```sh
+pi install git:github.com/alandotcom/pi-extensions@v0.1.0
 ```
 
 ## Make the agent use recall
