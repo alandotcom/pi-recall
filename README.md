@@ -23,11 +23,18 @@ the turn that happened a moment ago.
 
 | Parameter | Default | Meaning |
 | --- | --- | --- |
-| `query` | required | Literal text to look for. A distinctive identifier beats a phrase. |
+| `query` | required | Words, a phrase, an identifier, a path, or punctuation to search for. |
 | `limit` | `10` | Largest number of matches to return. |
 
-Matching is literal substring. Results are ordered by recency, with a small lift for messages that
-contain the query more than once. The whole result is capped at 6,000 characters.
+Query words can appear in any order. Search also matches related English word forms, such as
+“connection” and “connecting.” Literal matching remains available for paths, punctuation, and partial
+identifiers. Results favor literal phrases, then relevance and query-word coverage, then recency.
+Each result includes its source session and entry ID. The whole result, including omission notices,
+is capped at 6,000 characters.
+
+Each search builds two temporary SQLite full-text indexes in memory and closes the database afterward.
+No index is written to disk. `recall` uses the built-in `node:sqlite` module and requires Node 22.19.0
+or later. Node versions that mark SQLite as experimental emit a warning.
 
 ## ask_async
 
